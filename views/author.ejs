@@ -1,1 +1,302 @@
-<div>"Hello World by Author"</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta hhttp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Portfolio</title>
+</head>
+ 
+<body>
+    <div class="frame">
+        <div class="main_frame">
+
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left_pp">
+                        <img 
+                            src="/author/images/profile.png"
+                            width="156px"
+                            height="142px"
+                            alt=""
+                        />
+                    </div>
+                    <div class="left_fn"><%=user.name%></div>
+                    <div class="left_pr"><%=user.profession%></div>
+                    <div class="left_icons">
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/facebook.svg" class="icon_1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/instagram.svg" class="icon_2">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/twitter.svg" class="icon_3">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/linkedin.svg" class="icon_4">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/youtube.svg" class="icon_5">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/dribble.svg" class="icon_6">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+
+                <div class="left_2">
+                    <div class="left_2-1">
+                        <div class="rectangle_1">Age:</div>
+                        <div><%=user.age%></div>
+                    </div>
+                    <div class="left_2-2">
+                        <div class="rectangle_2">Residence:</div>
+                        <div><%=user.residence%></div>
+                    </div>
+                    <div class="left_2-3">
+                        <div class="rectangle_3">Freelance:</div>
+                        <div style="color: #7eb942;"><%=user.freelance%></div>
+                    </div>
+                    <div class="left_2-4">
+                        <div class="rectangle_4">Address:</div>
+                        <div><%=user.address%></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+
+                <div class="left_3">
+                    <div class="left_3-1">
+                        <div class="left_3-1_hdr">Languages</div>
+                    </div>
+                    <div class="left_3-2">
+                        <div><%=user.language[0]%></div>
+                        <div>100%</div>
+                    </div>
+                    <div class="marginer_mini">
+                        <div class="marginer_mini-100"></div>
+                    </div>
+                    <div class="left_3-2">
+                        <div><%=user.language[1]%></div>
+                        <div>80%</div>
+                    </div>
+                    <div class="marginer_mini">
+                        <div class="marginer_mini-80"></div>
+                    </div>
+                    <div class="left_3-2">
+                        <div><%=user.language[2]%></div>
+                        <div>90%</div>
+                    </div>
+                    <div class="marginer_mini">
+                        <div class="marginer_mini-90"></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                
+                <div class="left_4">
+                    <div class="left_4-skills">Skills</div>
+                    <div class="left_4-1">
+                        <div><%=user.skills[0]%></div>
+                        <div>90%</div>
+                    </div>
+                    <div class="marginer_mini">
+                        <div class="marginer_mini-90"></div>
+                    </div>
+                    <div class="left_4-1">
+                        <div><%=user.skills[1]%></div>
+                        <div>85%</div>
+                    </div>
+                    <div class="marginer_mini">
+                        <div class="marginer_mini-85"></div>
+                    </div>
+                    <div class="left_4-1">
+                        <div><%=user.skills[2]%></div>
+                        <div>80%</div>
+                    </div>
+                    <div class="marginer_mini">
+                        <div class="marginer_mini-80"></div>
+                    </div>
+                    <div class="left_4-1">
+                        <div><%=user.skills[3]%></div>
+                        <div>75%</div>
+                    </div>
+                    <div class="marginer_mini">
+                        <div class="marginer_mini-75"></div>
+                    </div>
+                    <div class="left_4-1">
+                        <div><%=user.skills[4]%></div>
+                        <div>85%</div>
+                    </div>
+                    <div class="marginer_mini">
+                        <div class="marginer_mini-85"></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+
+                <div class="left_5">
+                    <div class="left_5-exskls">Extra Skills</div>
+                    <div class="left_5-1">
+                        <div class="boxes_inside">
+                            <img src="/author/icon/boxes_inside.svg"/>
+                        </div>
+                        <span><%= user.extra_skills.slice(0, 2).join(", ")%></span>
+                    </div>
+                    <div class="left_5-1">
+                        <div class="boxes_inside">
+                            <img src="/author/icon/boxes_inside.svg"/>
+                        </div>
+                        <span><%= user.extra_skills.slice(2, 4).join(", ")%></span>
+                    </div>
+                    <div class="left_5-1">
+                        <div class="boxes_inside">
+                            <img src="/author/icon/boxes_inside.svg"/>
+                        </div>
+                        <span><%= user.extra_skills.slice(4, 6).join(", ")%></span>
+                    </div>
+                    <div class="left_5-1">
+                        <div class="boxes_inside">
+                            <img src="/author/icon/boxes_inside.svg"/>
+                        </div>
+                        <span><%= user.extra_skills.slice(6, 7).join(", ")%></span>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+            </div>
+
+            <div class="midd_frame">
+                <div class="midd_top">
+                    <img src="/author/icon/shape01.svg" class="midd_top-shape01"/>
+                    <img src="/author/icon/shape02.svg" class="midd_top-shape02"/>
+                    <img src="/author/icon/shape03.svg" class="midd_top-shape03"/>
+                    <img src="/author/icon/shape04.svg" class="midd_top-shape04"/>
+                    <img src="/author/icon/shape05.svg" class="midd_top-shape05"/>
+                    <img src="/author/icon/shape06.svg" class="midd_top-shape06"/>
+                    <img src="/author/icon/shape07.svg" class="midd_top-shape07"/>
+                    <div class="midd-top-left">
+                        <div class="midd_top-1">
+                            <%=user.profession%> in <br>
+                            <%=user.work_place%>
+                        </div>
+                        <div class="midd_top-2">
+                            <%=user.about_me%>
+                        </div>
+                        <a class="link_href" href="">
+                            <div class="midd_top-3">
+                                <img src="/author/btn_icon/button_hire-me.svg"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="midd_top-right">
+                            <img src="/author/images/your_image.png" class="your_image"/>
+                    </div>
+                </div>
+                <div class="midd_bot">
+                    <div class="midd_bot-1">My Services</div>
+                    <div class="midd_bot-2"><%=user.service_desc%></div>
+                    <div class="midd_bot-3">
+                            <div class="midd_bot-box-1">
+                                <div><img src="/author/icon/midd_bot-box1.svg"/></div>
+                                <div class="middbot_box-hdr">Web Development</div>
+                                <div class="middbot_box-bdy">Blog, E-commerce</div>
+                            </div>
+                            <div class="midd_bot-box-1">
+                                <div><img src="/author/icon/midd_bot-box2.svg"/></div>
+                                <div class="middbot_box-hdr">UI/UX Design</div>
+                                <div class="middbot_box-bdy">Mobile App, Website Design</div>
+                            </div>
+                            <div class="midd_bot-box-1">
+                                <div><img src="/author/icon/midd_bot-box3.svg"/></div>
+                                <div class="middbot_box-hdr">Sound Design</div>
+                                <div class="middbot_box-bdy">Voice over, Beat Making</div>
+                            </div>
+                    
+                    </div>
+                    <div class="midd_bot-4">
+                        <div class="midd_bot-box-1">
+                            <div><img src="/author/icon/midd_bot-box4.svg"/></div>
+                            <div class="middbot_box-hdr">Game Design</div>
+                            <div class="middbot_box-bdy">Character Design, Props & Objects</div>
+                        </div>
+                        <div class="midd_bot-box-1">
+                            <div><img src="/author/icon/midd_bot-box5.svg"/></div>
+                            <div class="middbot_box-hdr">Photography</div>
+                            <div class="middbot_box-bdy">Portrait, Product Photography</div>
+                        </div>
+                        <div class="midd_bot-box-1">
+                            <div class="middbot_box-hdr">Advertising</div>
+                            <div class="middbot_box-bdy">
+                                Lorem ipsum dolor sit amet,<br> 
+                                consectetur adipisicing elit.<br> 
+                                Eaque sit non adipisci.
+                            </div>
+                            <a class="link_href" href="">
+                                <div>
+                                    <img src="/author/btn_icon/order_now.svg"/>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right_frame">
+                <div class="right_1">
+                    <button type="button" class="contrast">
+                        <img src="/author/btn_icon/01contrast.svg"> 
+                    </button>
+                </div>
+                <div class="right_2">
+                    <a class="link_href" href="">
+                        <div>
+                            <img src="/author/btn_icon/02home.svg">
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div>
+                            <img src="/author/btn_icon/03service.svg">
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div>
+                            <img src="/author/btn_icon/04cv.svg">
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div>
+                            <img src="/author/btn_icon/05portfolio.svg">
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div>
+                            <img src="/author/btn_icon/06blog.svg">
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div>
+                            <img src="/author/btn_icon/07contact.svg">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
