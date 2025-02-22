@@ -46,7 +46,7 @@ app.get("/author", (req, res) => {
 });
   
 const server = http.createServer(app);
-let port = 4000;
+let port = 3000;
 server.listen(port, function () {
     console.log(`The server is running successfully on port ${port}`);
 })
