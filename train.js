@@ -1,11 +1,37 @@
+// TASK B
+/*
+B-TASK: 
+
+Shunday function tuzing, u 1 ta string parametrga ega bolsin, 
+hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+*/
+
+const a = [2, 5, 4, 7, 9, 0, 9];
+function countDigits(mix) {
+    return [...mix].filter(ele => !isNaN(ele)).length;   //NaN - Not a Number. isNaN() is a function to verify that the string is not a number
+    } 
+    
+console.log(countDigits("ad2a54y79wet0sfgb9"));
+
+
+
+
+
+
+
+
+
+
+
 // Task A
 
-
+/*
 function countLetter(letter, word) {
     return [...word].reduce((count, ele) => ele === letter ? count + 1 : count, 0);
 }
 console.log("masalani yechimi", countLetter("e", "engineer"));
-
+*/
 
 
 
@@ -51,11 +77,6 @@ maslahatBering(65, (err,data) => {
 
 console.log('passed here 01');
 */
-
-
-
-
-
 
 
 
