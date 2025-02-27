@@ -2,22 +2,13 @@ console.log("Web serverni boshlash");
 const express = require("express");
 const res = require("express/lib/response");
 const app = express();
-const fs = require("fs");
  
-let user;
-fs.readFile("database/user.json", "utf-8", (err, data) => {
-    if (err) {
-        console.log(err);
-    } else {
-        user = JSON.parse(data);
-    }
-});
 
 
-
+ 
 // MongoDB Atlas
 
-//const db = require("./server").db();
+const db = require("./server").db();
 
 //1: Kirish code       Middleware DP (Design Pattern) app.use
 
@@ -38,17 +29,33 @@ app.set("view engine", "ejs");
                      
 //4: Routing code
 app.post("/create-item", (req, res) => {
-    console.log(req.body);
-    res.json({test: "Success"});
-});
+    console.log("user entered /create-item");
+    const new_reja = req.body.reja;
+    db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+        if (err) {
+            console.log(err);
+            res.end('something went wrong');
+        } else {
+            res.end('succesfully added');
+        }
+    });
+}); 
 
 app.get("/", function (req, res) {
-    res.render('rejalar');
-});
+    console.log("user entered /");
+    db.collection("plans").find().toArray((err, data) => {
+        if(err) {
+            console.log(err);
+            res.end('something went wrong');
+        } else {
+            res.render("rejalar", { items: data });
+        }
+    })
+});  
 
-app.get("/author", (req, res) => {
-    res.render("author", { user: user });
-});
+// app.get("/author", (req, res) => {
+//     res.render("author", { user: user });
+// });
   
 module.exports = app;
  
