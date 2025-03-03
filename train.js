@@ -1,3 +1,74 @@
+// TASK C
+const time = new Date().toLocaleTimeString();
+
+
+
+
+class Shop {
+
+    constructor(non, kebab, ayron) {
+        this.non = non;
+        this.kebab = kebab;
+        this.ayron = ayron;
+    };
+
+    qoldiq() {
+        return `Soat ${time}da bizda, ${this.non} ta Non, ${this.kebab} ta Kebab, ${this.ayron} ta Ayron bor`;
+    };
+
+    sotish(a, b) {
+        if (a === 'non') {
+            if (this.non >= b) {
+                this.non -= b;
+            } else {
+                console.log(`Uzr aka non ${this.non} ta qolibdi`);
+            } 
+        } else if (a === 'kebab') {
+            if (this.kebab >= b) {
+                this.kebab -= b;
+            } else {
+                console.log(`Uzr aka kebab ${this.kebab} ta qolibdi`);
+            } 
+        }
+        else if (a === 'ayron') {
+            if (this.ayron >= b) {
+                this.ayron -= b;
+            } else {
+                console.log(`Uzr aka ayron ${this.ayron} ta qolibdi`);
+            } 
+        } else {
+            console.log('Aka menyuda bunaqa mahsulot yoq');
+        }
+    };
+
+    qabul(a, b) {
+        if (a === 'non') {
+            this.non += b;
+        } else if (a === 'kebab') {
+            this.kebab += b;
+        } else if (a === 'ayron') {
+            this.ayron += b;
+        } else {
+            console.log('Aka biz bunaqa narsa zakaz qilmagandik');
+        }
+    };
+};
+
+const shop = new Shop (9, 3, 5);
+
+console.log(shop.qoldiq());
+shop.qabul('non', 5);
+console.log(shop.qoldiq());
+shop.sotish('kebab', 5);
+console.log(shop.qoldiq());
+
+
+
+
+
+
+
+
 // TASK B
 /*
 B-TASK: 
@@ -7,12 +78,13 @@ hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 */
 
-const a = [2, 5, 4, 7, 9, 0, 9];
-function countDigits(mix) {
-    return [...mix].filter(ele => !isNaN(ele)).length;   //NaN - Not a Number. isNaN() is a function to verify that the string is not a number
-    } 
+
+// const a = [2, 5, 4, 7, 9, 0, 9];
+// function countDigits(mix) {
+//     return [...mix].filter(ele => !isNaN(ele)).length;   //NaN - Not a Number. isNaN() is a function to verify that the string is not a number
+//     } 
     
-console.log(countDigits("ad2a54y79wet0sfgb9"));
+// console.log(countDigits("ad2a54y79wet0sfgb9"));
 
 
 
