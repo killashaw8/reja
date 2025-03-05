@@ -20,7 +20,7 @@ function itemTemplate(item) {
 let createField = document.getElementById("create-field");
 
 document.getElementById("create-form").addEventListener("submit", function (e) {
-    e.preventDefault();
+    e.preventDefault();   //Traditional API stop!!
 
     axios
         .post("/create-item", {reja: createField.value})

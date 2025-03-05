@@ -1,8 +1,21 @@
+// TASK D
+function checkContent(a, b) {
+return [...a].sort().join('') === [...b].sort().join('');
+}
+
+console.log(checkContent("mitgroup", "gmtiprou"));
+
+
+
+
+
+
+
+
 // TASK C
+
+/*
 const time = new Date().toLocaleTimeString();
-
-
-
 
 class Shop {
 
@@ -61,8 +74,7 @@ shop.qabul('non', 5);
 console.log(shop.qoldiq());
 shop.sotish('kebab', 5);
 console.log(shop.qoldiq());
-
-
+*/
 
 
 
