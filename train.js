@@ -1,10 +1,21 @@
+// TASK E
+function getReverse(a) {
+    return [...a].reverse().join("") ;
+}
+
+console.log(getReverse("hello"));
+
+
+
 // TASK D
+
+/*
 function checkContent(a, b) {
 return [...a].sort().join('') === [...b].sort().join('');
 }
 
 console.log(checkContent("mitgroup", "gmtiprou"));
-
+*/
 
 
 
@@ -97,13 +108,6 @@ MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 //     } 
     
 // console.log(countDigits("ad2a54y79wet0sfgb9"));
-
-
-
-
-
-
-
 
 
 
