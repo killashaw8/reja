@@ -1,10 +1,20 @@
+// TASK F
+function findDoublers(a) {
+    const b = [...a];
+    return b.some((ele, index) => b.indexOf(ele) !== index);
+}
+
+console.log(findDoublers("hello"));
+
+
 // TASK E
+/*
 function getReverse(a) {
     return [...a].reverse().join("") ;
 }
 
 console.log(getReverse("hello"));
-
+*/
 
 
 // TASK D
@@ -16,10 +26,6 @@ return [...a].sort().join('') === [...b].sort().join('');
 
 console.log(checkContent("mitgroup", "gmtiprou"));
 */
-
-
-
-
 
 
 
@@ -86,9 +92,6 @@ console.log(shop.qoldiq());
 shop.sotish('kebab', 5);
 console.log(shop.qoldiq());
 */
-
-
-
 
 
 
